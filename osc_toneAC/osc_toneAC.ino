@@ -2,7 +2,7 @@
 #include <DFRobot_AD9837.h>
 
 float octPerVolt = 1.0;
-float baseFrequency = 55;
+float baseFrequency = 54;
 
 float LAST_FREQ1 = 0.0;
 float LAST_FREQ2 = 0.0;
@@ -35,8 +35,8 @@ void loop() {
   }
 
   if (LAST_FREQ2 != FREQ2) {
-    //DAC2.outputSin(phase, FREQ1);
-    DAC2.outputTriangle(phase, FREQ2);
+    DAC2.outputSin(phase, FREQ2);
+    //DAC2.outputTriangle(phase, FREQ2);
     //DAC2.outputSquare(DAC2.eDIV2_1, phase, FREQ2);
     LAST_FREQ2 != FREQ2;
   }
